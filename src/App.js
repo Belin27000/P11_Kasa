@@ -1,14 +1,17 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import Home from './Pages/Public/Acceuil/Home.js';
+import { BrowserRouter } from 'react-router-dom';//Nous permet d'utiliser le routage avec React
+import PublicRouter from './Pages/Public/PublicRouter.js';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Home />
-      </header>
+      <BrowserRouter>
+        <PublicRouter />
+      </BrowserRouter>
+
     </div>
   );
 }

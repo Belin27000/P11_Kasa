@@ -1,0 +1,10 @@
+footer {
+
+    background-color: black;
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+footer p {
+    color: white;
+}

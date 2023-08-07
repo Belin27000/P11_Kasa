@@ -1,0 +1,21 @@
+.PageError {
+    height: 60vh;
+    color: #FF6060;
+    margin-bottom: 8rem;
+}
+
+.PageError p:first-child {
+    font-size: 16rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+.PageError p:nth-child(2) {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 10rem;
+}
+
+.PageError a {
+    text-decoration: underline;
+}
