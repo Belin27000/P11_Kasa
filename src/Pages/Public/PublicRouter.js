@@ -16,7 +16,7 @@ const PublicRouter = () => {
                 <Route index element={<Home />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/a-propos" element={<APropos />} />
-                <Route path="/homeDetails" element={<HomeDetails />} />
+                <Route path="/homeDetails/:hid" element={<HomeDetails />} />
 
 
                 <Route path="*" element={<Error />} />{/*Renvoi vers la page error 404 si aucune route n'est trouvé */}

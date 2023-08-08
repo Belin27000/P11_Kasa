@@ -6,8 +6,14 @@ let getAllData = () => {
     return data
 }
 
-let getHome = (id) => {
-    return data.get('/id')
+//recois en parametre l'id du logement selectionné puis retourne l'objet contenant toutes les infos
+// pour gerer l'affichage
+let getHome = (hid) => {
+
+    const homeFind = (hid, data) => data.find(val => val.id === hid);
+
+    let homeClick = homeFind(hid, data);
+    return (homeClick)
 }
 
 export const homeService = {

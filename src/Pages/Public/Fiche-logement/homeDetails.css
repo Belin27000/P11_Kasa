@@ -1,0 +1,50 @@
+.DetailBanner img {
+    width: 100%;
+    position: relative;
+    border-radius: 1.4rem;
+    max-height: 20rem;
+    object-fit: cover;
+}
+
+.Profil {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.HomeProfil {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.HomeTitle {
+    font-size: 2rem;
+    color: #FF6060;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.HomeLocation {
+    color: #FF6060;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.HostProfil {
+    display: flex;
+    align-items: center;
+}
+
+.HostProfil img {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+}
+
+.HostProfil p {
+    width: 5rem;
+    color: #FF6060;
+    font-size: 1rem;
+}
