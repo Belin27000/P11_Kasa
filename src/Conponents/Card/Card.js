@@ -6,6 +6,7 @@ import Rating from '../Stars/Rating.js';
 import Tags from '../Tag/Tags.js';
 import Carrousel from '../Gallery/Carrousel.js';
 import DesDropdown from '../DropDown/DesDropdown.js';
+import EquDropdown from '../DropDown/EquDropdown.js';
 
 const Card = () => {
 
@@ -30,7 +31,9 @@ const Card = () => {
             </div>
             <div className='CardDetail'>
                 <DesDropdown description={homeDetails.description} />
+                <EquDropdown Equipment={homeDetails.equipments} />
             </div>
+
         </div>
     );
 };

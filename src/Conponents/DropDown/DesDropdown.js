@@ -13,11 +13,11 @@ const DesDropdown = (description) => {
 
     return (
         <div className='DesDropdown'>
-            <div className='HeaderDes'>
-                <div className='DesName'>{Object.keys(description)}</div>
-                <FaAngleDown className={rotate ? 'DesArrow rotate' : 'DesArrow'} onClick={hideDes} />
+            <div className='HeaderDetails'>
+                <div className='Name'>{Object.keys(description)}</div>
+                <FaAngleDown className={rotate ? 'Arrow rotate' : 'Arrow'} onClick={hideDes} />
             </div>
-            <div className={hide ? 'DesDetail DesDetail-hidden' : 'DesDetail'}>{description.description}</div>
+            <div className={hide ? 'Detail Detail-hidden' : 'Detail'}>{description.description}</div>
 
         </div>
     );
