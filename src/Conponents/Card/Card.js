@@ -5,13 +5,12 @@ import DetailBanner from '../../Conponents/Banner/DetailBanner.js'
 import Profil from '../Profil/Profil.js';
 import Rating from '../Stars/Rating.js';
 import Tags from '../Tag/Tags.js';
+import Carrousel from '../Gallery/Carrousel.js';
 
 const Card = () => {
 
     const [homeDetails, setHomeDetails] = useState([])
     let { hid } = useParams()//Recupere l'id du logement
-    // console.log(hid);
-    // console.log(homeDetails);
 
     useEffect(() => {
         //renvoi l'objet avec toutes les infos du logement au chargement de la page
@@ -24,6 +23,7 @@ const Card = () => {
 
         <div className='Card'>
             <DetailBanner home={homeDetails} />
+            <Carrousel home={homeDetails} />
             <Profil title={homeDetails.title} location={homeDetails.location} host={homeDetails.host} />
             <div className='TagRate'>
                 <Tags tags={homeDetails.tags} />

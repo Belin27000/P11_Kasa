@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Profil = ({ title, location, host }) => {
-    console.log(title, location, host);
 
     // const [detail, SetDetail] = useState([])
     // const [loading, setLoading] = useState(true)

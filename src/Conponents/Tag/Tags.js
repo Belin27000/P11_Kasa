@@ -1,23 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-const Tags = (Tags) => {
-    // console.log(Tags.tags);
-    const [tags, setTags] = useState([])
+const Tags = (Tags, index) => {
 
-
-    useEffect(() => {
-
-
-        setTags(Tags.tags)
-
-
-    }, [])
-
-    console.log(tags);
     return (
         <div className='Tags'>
             {
-                tags?.map(tag =>
+                Tags.tags?.map((tag, index) =>
                 (
                     <div className='tag'>{tag}</div>
                 ))

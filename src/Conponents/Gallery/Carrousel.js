@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Carrousel = () => {
+const Carrousel = (imageList) => {
+    console.log(imageList);
     return (
         <div className='Carrousel'>
 
