@@ -22,8 +22,8 @@ const Card = () => {
     return (
 
         <div className='Card'>
-            <DetailBanner home={homeDetails} />
-            <Carrousel home={homeDetails} />
+            {/* <DetailBanner home={homeDetails} /> */}
+            <Carrousel images={homeDetails.pictures} title={homeDetails.title} />
             <Profil title={homeDetails.title} location={homeDetails.location} host={homeDetails.host} />
             <div className='TagRate'>
                 <Tags tags={homeDetails.tags} />

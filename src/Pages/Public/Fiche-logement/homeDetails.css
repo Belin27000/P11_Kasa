@@ -1,10 +1,71 @@
-.DetailBanner img {
-    width: 100%;
-    position: relative;
-    border-radius: 1.4rem;
-    max-height: 20rem;
-    object-fit: cover;
+.HomeDetails {
+    height: 100vh;
+    margin-top: 1.1rem;
 }
+
+/*****Component Style Carrousel*****/
+.Carrousel {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    position: relative
+}
+
+.slides {
+    width: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1.4rem;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-hidden {
+    display: none;
+}
+
+.arrow {
+    position: absolute;
+    width: 32px;
+    color: white;
+    height: 2.6rem;
+    width: 2.6rem;
+    /* box-shadow: 0px 0px 5px #555; */
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+.arrow-left {
+    left: 1rem;
+    z-index: 10;
+}
+
+.arrow-right {
+    right: 1rem;
+}
+
+.indicators {
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.indicator-hidden {
+    display: none;
+}
+
+/*****Component Style Profil*****/
 
 .Profil {
     display: flex;
@@ -37,13 +98,6 @@
     align-items: center;
 }
 
-.HostProfil img {
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    margin-left: 0.5rem;
-}
-
 .HostProfil p {
     width: 5rem;
     color: #FF6060;
@@ -51,6 +105,15 @@
     text-align: end;
     line-height: 1.4rem;
 }
+
+.HostProfil img {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+}
+
+/*****Component Style Rating*****/
 
 .GoodStar {
     color: #FF6060;
@@ -60,17 +123,21 @@
     color: #E3E3E3;
 }
 
+.Rating {
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/*****Component Style Card*****/
+
 .TagRate {
     display: flex;
     justify-content: space-between;
     margin-top: 1.1rem;
 }
 
-.Rating {
-    width: 15%;
-    display: flex;
-    justify-content: space-around;
-}
+/*****Component Style Tags*****/
 
 .Tags {
     display: flex;
