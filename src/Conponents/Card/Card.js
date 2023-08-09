@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { homeService } from '../../_Services/home.service.js';
 import { useParams } from 'react-router-dom';
-import DetailBanner from '../../Conponents/Banner/DetailBanner.js'
 import Profil from '../Profil/Profil.js';
 import Rating from '../Stars/Rating.js';
 import Tags from '../Tag/Tags.js';
 import Carrousel from '../Gallery/Carrousel.js';
+import DesDropdown from '../DropDown/DesDropdown.js';
 
 const Card = () => {
 
@@ -22,12 +22,14 @@ const Card = () => {
     return (
 
         <div className='Card'>
-            {/* <DetailBanner home={homeDetails} /> */}
             <Carrousel images={homeDetails.pictures} title={homeDetails.title} />
             <Profil title={homeDetails.title} location={homeDetails.location} host={homeDetails.host} />
             <div className='TagRate'>
                 <Tags tags={homeDetails.tags} />
                 <Rating rating={homeDetails.rating} />
+            </div>
+            <div className='CardDetail'>
+                <DesDropdown description={homeDetails.description} />
             </div>
         </div>
     );
