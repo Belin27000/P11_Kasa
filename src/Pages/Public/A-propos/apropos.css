@@ -1,0 +1,28 @@
+.About {
+    height: 100vh;
+    margin-top: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BannerAbout {
+    width: 100%;
+    position: relative;
+    margin-top: 2.5rem;
+}
+
+.BannerAbout img {
+    border-radius: 25px;
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+}
+
+.topics {
+    width: 70%;
+}
+
+.HeaderDetails {
+    margin-top: 1.85rem;
+}
