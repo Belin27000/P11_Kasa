@@ -24,10 +24,18 @@ const Card = () => {
 
         <div className='Card'>
             <Carrousel images={homeDetails.pictures} title={homeDetails.title} />
-            <Profil title={homeDetails.title} location={homeDetails.location} host={homeDetails.host} />
-            <div className='TagRate'>
-                <Tags tags={homeDetails.tags} />
-                <Rating rating={homeDetails.rating} />
+            <div className='CardInfo'>
+                <div className='ProfilTag'>
+                    <Profil title={homeDetails.title} location={homeDetails.location} host={homeDetails.host} />
+                    <Tags tags={homeDetails.tags} />
+                </div>
+                <div className='ProfilRate'>
+                    <div className='HostProfil'>
+                        <p className='ProfilName'>{homeDetails.host?.name}</p>
+                        <img src={homeDetails.host?.picture} alt={homeDetails.host?.name} />
+                    </div>
+                    <Rating rating={homeDetails.rating} />
+                </div>
             </div>
             <div className='CardDetail'>
                 <DesDropdown description={homeDetails.description} />

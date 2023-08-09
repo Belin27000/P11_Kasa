@@ -37,3 +37,10 @@
     padding-left: 1rem;
     /* width: 50%; */
 }
+
+@media(max-width:769px) {
+    .Cards {
+        padding: 0;
+        grid-gap: 1rem;
+    }
+}

@@ -8,3 +8,9 @@ footer {
 footer p {
     color: white;
 }
+
+@media(max-width:769px) {
+    footer p {
+        font-size: 0.8rem;
+    }
+}

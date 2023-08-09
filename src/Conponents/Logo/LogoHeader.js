@@ -3,8 +3,8 @@ import LOGOHeader from '../../assets/Images/LOGOHeader.png'
 
 const LogoHeader = () => {
     return (
-        <div>
-            <img src={LOGOHeader} alt='Logo of Kasa app' />
+        <div className='LogoContainer'>
+            <img className='Logo' src={LOGOHeader} alt='Logo of Kasa app' />
         </div>
     );
 };

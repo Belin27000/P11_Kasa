@@ -1,12 +1,18 @@
 header {
     display: flex;
-    margin-left: 1rem;
-    margin-right: 1rem;
     margin-top: 40px;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
+.LogoContainer {
+    width: 14.5%;
+}
+
+.Logo {
+    width: 100%
+}
 
 ul {
     list-style: none;
@@ -21,4 +27,17 @@ ul li {
 a {
     text-decoration: none;
     color: #FF6060;
+}
+
+@media(max-width:769px) {
+
+    .LogoContainer {
+        width: 38%;
+    }
+
+    ul li {
+        font-size: .8rem;
+        /* display: inline-block;
+        margin-right: 20px; */
+    }
 }

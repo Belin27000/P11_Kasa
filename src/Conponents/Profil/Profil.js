@@ -20,11 +20,7 @@ const Profil = ({ title, location, host }) => {
                 <p className='HomeTitle'>{title}</p>
                 <p className='HomeLocation'>{location}</p>
             </div>
-            <div className='HostProfil'>
 
-                <p className='ProfilName'>{host?.name}</p>
-                <img src={host?.picture} alt={host?.name} />
-            </div>
 
         </div>
     );
