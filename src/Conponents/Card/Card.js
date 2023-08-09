@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import DetailBanner from '../../Conponents/Banner/DetailBanner.js'
 import Profil from '../Profil/Profil.js';
 import Rating from '../Stars/Rating.js';
+import Tags from '../Tag/Tags.js';
 
 const Card = () => {
 
@@ -24,7 +25,10 @@ const Card = () => {
         <div className='Card'>
             <DetailBanner home={homeDetails} />
             <Profil title={homeDetails.title} location={homeDetails.location} host={homeDetails.host} />
-            <Rating />
+            <div className='TagRate'>
+                <Tags tags={homeDetails.tags} />
+                <Rating rating={homeDetails.rating} />
+            </div>
         </div>
     );
 };
