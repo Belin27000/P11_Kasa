@@ -293,10 +293,12 @@
     .Tags {
         width: 100%;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     .tag {
         font-size: 0.55rem;
+        margin-bottom: 1rem;
     }
 
     .ProfilRate {
