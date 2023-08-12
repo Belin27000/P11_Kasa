@@ -1,11 +1,11 @@
 import React from 'react';
-import banner from '../../assets/Images/Banner.png'
 
-const Banner = () => {
+
+const Banner = ({ image, title }) => {
     return (
         <div className='Banner'>
-            <img src={banner} alt='Banner beach with mountain and trees' />
-            <div>Chez vous, partout et ailleurs</div>
+            <img src={image} alt='Banner beach with mountain and trees' />
+            <div>{title}</div>
         </div>
     );
 };

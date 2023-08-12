@@ -1,14 +1,15 @@
 import React from 'react';
 import './apropos.css'
-
-import BannerAbout from '../../../Conponents/Banner/BannerAbout.js';
+import Banner from '../../../Conponents/Banner/Banner.js';
+import imageAbout from '../../../assets/Images/BannerAbout.png'
 import Listeabout from '../../../assets/Api/about.json';
-
 import Dropdown from '../../../Conponents/DropDown/Dropdown.js'
+
+
 const APropos = () => {
     return (
         <section className='About'>
-            <BannerAbout />
+            <Banner image={imageAbout} title="" />
 
             <ul className='topics'>
                 {

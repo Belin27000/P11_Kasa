@@ -37,7 +37,6 @@ const Card = () => {
     }
 
     if (isLoading) return (<h3>Chargement...</h3>)
-    console.log(homeDetails);
     return (
 
         <div className='Card'>

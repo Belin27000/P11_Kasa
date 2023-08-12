@@ -1,12 +1,14 @@
 import React from 'react';
-import LogoFooter from '../../Conponents/Logo/LogoFooter.js';
+import LOGOFooter from '../../assets/Images/LogoWhite.png';
 import './footer.css'
 
 const Footer = () => {
     return (
         <div className='Footer'>
             <footer>
-                <LogoFooter />
+                <div>
+                    <img src={LOGOFooter} alt='Logo of Kasa app' />
+                </div>
                 <p>
                     © 2020 Kasa. All rights reserved
                 </p>

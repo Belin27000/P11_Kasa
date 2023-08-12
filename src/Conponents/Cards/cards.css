@@ -7,17 +7,12 @@
     margin-top: 2rem;
     border-radius: 25px;
 
-    /* flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between; */
 
 }
 
 .CardCover {
-    /* width: 340px; */
     position: relative;
     height: 340px;
-    /* position: relative; */
 
 }
 
@@ -41,6 +36,5 @@
 @media(max-width:769px) {
     .Cards {
         padding: 0;
-        grid-gap: 1rem;
     }
 }

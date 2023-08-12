@@ -7,7 +7,7 @@ const Tags = (Tags, index) => {
             {
                 Tags.tags?.map((tag, index) =>
                 (
-                    <div className='tag'>{tag}</div>
+                    <div key={index} className='tag'>{tag}</div>
                 ))
             }
         </div>

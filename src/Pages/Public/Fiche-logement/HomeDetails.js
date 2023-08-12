@@ -5,7 +5,6 @@ import './homeDetails.css'
 const HomeDetails = () => {
 
     return (
-
         <div className='HomeDetails'>
             <Card />
         </div>

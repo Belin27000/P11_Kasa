@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FaAngleDown } from "react-icons/fa";
 
 const Dropdown = ({ title, description, liste }) => {
-    console.log({ title, description, liste });
     const [open, setOpen] = useState(false);
     let dropdownDetail
 
@@ -16,7 +15,7 @@ const Dropdown = ({ title, description, liste }) => {
             <ul className={!open ? 'Detail Detail-hidden' : 'Detail'}>
                 {
                     description?.map((description, index) => {
-                        return <li>
+                        return <li key={index}>
                             {description}
                         </li>
                     })

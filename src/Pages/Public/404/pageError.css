@@ -3,19 +3,19 @@
     margin-bottom: 8rem;
 }
 
-.PageError p:first-child {
+.titre-404 {
     font-size: 16rem;
     font-weight: bold;
     margin-bottom: 4rem;
 }
 
-.PageError p:nth-child(2) {
+.description-404 {
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: 10rem;
 }
 
-.PageError a {
+.lien-404 {
     text-decoration: underline;
 }
 
@@ -24,15 +24,15 @@
         margin-bottom: 2.5rem;
     }
 
-    .PageError p:first-child {
+    .titre-404 {
         font-size: 5.4rem
     }
 
-    .PageError p:nth-child(2) {
+    .description-404 {
         font-size: 1rem;
     }
 
-    .PageError a {
+    .lien-404 {
         font-size: 0.75rem;
     }
 }

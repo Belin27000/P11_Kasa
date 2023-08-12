@@ -36,7 +36,7 @@ const Carrousel = ({ images, title, index }) => {
 
                     images?.map((image, index) => {
                         // si l'index correspond a l'index courant on ajoute une classe hiden au autres index en bas du carrousel
-                        return <div className={slide === index ? "indicator" : "indicator indicator-hidden"} >{index + 1}/{images.length}</div>
+                        return <div key={index} className={slide === index ? "indicator" : "indicator indicator-hidden"} >{index + 1}/{images.length}</div>
                     })
                 }
             </span>
