@@ -1,5 +1,5 @@
 .HomeDetails {
-    /* height: 100vh; */
+    height: 100vh;
     margin-top: 1.1rem;
 }
 
@@ -95,6 +95,7 @@
 .HostProfil {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .HostProfil p {
@@ -133,7 +134,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 12%;
+    width: 25%;
 }
 
 .ProfilTag {
@@ -154,6 +155,7 @@
 .Tags {
     display: flex;
     width: 85%;
+    flex-wrap: wrap;
 }
 
 .tag {
@@ -163,6 +165,7 @@
     font-size: 0.8rem;
     color: white;
     border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
 .CardDetail {
@@ -173,12 +176,13 @@
 
 .CardDetail {
     display: flex;
-    gap: 20%;
+    gap: 10%;
+    flex-direction: row;
 }
 
 .EquDropdown,
 .DesDropdown {
-    width: 40%;
+    width: 45%;
     display: flex;
     flex-direction: column;
 }
@@ -188,13 +192,15 @@
     justify-content: space-between;
     align-items: center;
     background-color: #FF6060;
-    padding: 0.8rem 1.1rem;
+    padding: 0 1.1rem;
     border-radius: 0.5rem;
 }
 
 .Name {
     text-transform: capitalize;
-    font-size: 1rem;
+    /* font-size: 1rem; */
+    padding: 0.8rem 0;
+    margin: 0;
     color: white;
     font-weight: 500;
 }
@@ -218,7 +224,12 @@
     padding: 1.9rem 1.1rem;
     flex: auto;
     line-height: 1.6rem;
+    margin: 0;
 
+}
+
+.Detail li {
+    display: flex;
 }
 
 .Detail-hidden {
@@ -226,6 +237,11 @@
 }
 
 @media(max-width:769px) {
+    .LogoContainer {
+        max-width: 145px;
+        width: 40%;
+    }
+
     .Cards {
         padding: 0;
     }

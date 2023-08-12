@@ -1,29 +1,47 @@
 import React, { useEffect, useState } from 'react';
-import { homeService } from '../../_Services/home.service.js';
-import { useParams } from 'react-router-dom';
+import { homeService } from '../../_Services/logements.service.js';
+import { useNavigate, useParams } from 'react-router-dom';
 import Profil from '../Profil/Profil.js';
 import Rating from '../Stars/Rating.js';
 import Tags from '../Tag/Tags.js';
 import Carrousel from '../Gallery/Carrousel.js';
-import DesDropdown from '../DropDown/DesDropdown.js';
-import EquDropdown from '../DropDown/EquDropdown.js';
+import Dropdown from '../DropDown/Dropdown.js';
 
 const Card = () => {
 
-    const [homeDetails, setHomeDetails] = useState([])
-    let { hid } = useParams()//Recupere l'id du logement
+    const [homeDetails, setHomeDetails] = useState({})
+    const [isLoading, setIsLoading] = useState(true);
 
+    let { hid } = useParams()//Recupere l'id du logement
+    let navigate = useNavigate()
     useEffect(() => {
-        //renvoi l'objet avec toutes les infos du logement au chargement de la page
-        setHomeDetails(homeService.getHome(hid))
+        getInfo();
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+    const getInfo = async () => {
+        await homeService.getHome(hid)
+            .then((data) => {
+                if (data) {
+                    setHomeDetails(data);
+                    setIsLoading(false);
+                } else {
+                    navigate("/404");
+                }
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+
+    }
+
+    if (isLoading) return (<h3>Chargement...</h3>)
+    console.log(homeDetails);
     return (
 
         <div className='Card'>
-            <Carrousel images={homeDetails.pictures} title={homeDetails.title} />
+            <Carrousel images={homeDetails.pictures} title={homeDetails.title} key={homeDetails.id} />
             <div className='CardInfo'>
                 <div className='ProfilTag'>
                     <Profil title={homeDetails.title} location={homeDetails.location} host={homeDetails.host} />
@@ -37,10 +55,12 @@ const Card = () => {
                     <Rating rating={homeDetails.rating} />
                 </div>
             </div>
+
             <div className='CardDetail'>
-                <DesDropdown description={homeDetails.description} />
-                <EquDropdown Equipment={homeDetails.equipments} />
+                <Dropdown title={"Description"} description={homeDetails.description} liste="description" />
+                <Dropdown title={"Équipments"} description={homeDetails.equipments} liste={"listeEquipments"} />
             </div>
+
 
         </div>
     );

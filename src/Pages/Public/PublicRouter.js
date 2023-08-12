@@ -1,12 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { Error, Home, APropos, HomeDetails } from './index.js';
 
-import { Layout, Home, APropos, HomeDetails } from './index.js';
-
-import Error from './404/PageError.js'
-
-//PublicRouter nous permet de clean App Toutes les route seront géré ici après etre passé par Layout
-// Et le resultat est renvoyé dans App
+import Layout from '../../Layouts/Layout.js';
 
 const PublicRouter = () => {
     return (
@@ -18,8 +14,7 @@ const PublicRouter = () => {
                 <Route path="/a-propos" element={<APropos />} />
                 <Route path="/homeDetails/:hid" element={<HomeDetails />} />
 
-
-                <Route path="*" element={<Error />} />{/*Renvoi vers la page error 404 si aucune route n'est trouvé */}
+                <Route path="*" element={<Error />} />
             </Route>
 
 
