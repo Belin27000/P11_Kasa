@@ -1,7 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa"
 
-const Carrousel = ({ images, title, index }) => {
+const Carrousel = ({ images, title }) => {
+    const [carButton, setCarButton] = useState(true)
+
+    useEffect(() => {
+        if (images.length <= 1) {
+            setCarButton(false)
+        }
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+
     // variable de controle du slide sur lequel on se trouve
     const [slide, SetSlide] = useState(0)
 
@@ -16,11 +26,11 @@ const Carrousel = ({ images, title, index }) => {
 
     return (
         <div className='Carrousel'>
-            <FaAngleLeft className='arrow arrow-left ' onClick={previsouSlide} />
+            <FaAngleLeft className={carButton ? 'arrow arrow-left' : 'arrow-hidden'} onClick={previsouSlide} />
 
             <div className='slides'>
                 {
-                    images?.map((image, index) => {
+                    images.map((image, index) => {
                         return (
                             // si l'index correspond a l'index courant on ajoute une classe hiden au autres images
                             <img src={image} alt={title + index} key={index} className={slide === index ? "slide" : "slide slide-hidden"} />
@@ -30,14 +40,16 @@ const Carrousel = ({ images, title, index }) => {
 
                 }
             </div>
-            <FaAngleRight className='arrow arrow-right' onClick={nextSlide} />
+            <FaAngleRight className={carButton ? 'arrow arrow-right' : 'arrow-hidden'} onClick={nextSlide} />
             <span className='indicators'>
                 {
+                    carButton && (
 
-                    images?.map((image, index) => {
-                        // si l'index correspond a l'index courant on ajoute une classe hiden au autres index en bas du carrousel
-                        return <div key={index} className={slide === index ? "indicator" : "indicator indicator-hidden"} >{index + 1}/{images.length}</div>
-                    })
+                        images.map((image, index) => {
+                            // si l'index correspond a l'index courant on ajoute une classe hiden au autres index en bas du carrousel
+                            return <div key={index} className={slide === index ? "indicator" : "indicator indicator-hidden"} >{index + 1}/{images.length}</div>
+                        })
+                    )
                 }
             </span>
 

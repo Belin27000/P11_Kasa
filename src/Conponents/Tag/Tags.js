@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Tags = (Tags, index) => {
+const Tags = ({ tags }) => {
 
     return (
         <div className='Tags'>
             {
-                Tags.tags?.map((tag, index) =>
+                tags.map((tag, index) =>
                 (
                     <div key={index} className='tag'>{tag}</div>
                 ))

@@ -1,20 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaAngleDown } from "react-icons/fa";
+
 
 const Dropdown = ({ title, description, liste }) => {
     const [open, setOpen] = useState(false);
+    const [showChildren, setShowChildren] = useState(open)
     let dropdownDetail
+    useEffect(() => {
+        if (open) {
+            setShowChildren(true)
+        } else {
+            const timer = setTimeout(() => {
+
+                setShowChildren(false)
+            }, 500)
+            return () => {
+                clearTimeout(timer);
+            }
+        }
+
+    }, [open])
+
 
     const handleDropdown = () => {
         setOpen(!open);
 
+
     }
 
     if (liste === "listeEquipments") {
-        dropdownDetail = open && (
+        dropdownDetail = showChildren && (
+
             <ul className={!open ? 'Detail Detail-hidden' : 'Detail'}>
                 {
-                    description?.map((description, index) => {
+                    description.map((description, index) => {
                         return <li key={index}>
                             {description}
                         </li>
@@ -22,12 +41,14 @@ const Dropdown = ({ title, description, liste }) => {
 
                 }
             </ul>
+
         )
     } else {
-        dropdownDetail = open && (
-            <div className={!open ? 'Detail Detail-hidden' : 'Detail'}>
+        dropdownDetail = showChildren && (
+            <p className={!open ? 'Detail Detail-hidden' : 'Detail'}>
                 {description}
-            </div>
+            </p>
+
         )
     }
 
